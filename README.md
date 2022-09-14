@@ -15,6 +15,8 @@ BUT有了这个工具他会自动格式化114.114.114.114成http://144.144.144.1
 ### 食用方法：
 
 ```shell
+git clone https://github.com/rat857/format_target.git
+cd format_target
 python3 format.py -h
 
 python3 format.py -i your.txt -o end.txt	#your.txt是你的混合文件，end.txt是格式化后的文件名
