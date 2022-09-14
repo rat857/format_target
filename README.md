@@ -1,4 +1,5 @@
 # format_target
+格式化未带请求头的url
 
 ### 背景：
 
