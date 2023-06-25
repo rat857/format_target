@@ -29,3 +29,11 @@ python3 format.py -i your.txt -o end.txt	#your.txt是你的混合文件，end.tx
 nuclei -l end.txt
 ```
 
+### shodan_API的配合方法
+
+```shell
+shodan download --limit -1 fav http.favicon.hash:-911494769 #fav为保存的文件名，最终会保存为fav.json.gz,这一行是从shodan官网下载下来目标数据
+shodan parse --fields ip_str,port fav.json.gz > 1.txt #解析下载下来的数据
+cat 1.txt | sed s/[[:space:]]/:/g > target.txt
+python3 format.py -i target.txt -o end.txt
+```
